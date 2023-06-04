@@ -46,11 +46,9 @@
             "keywords": [
                 "C",
                 "Cpp11",
-                "Cpp14",
-                "Qt5",
-                "OpenCV"
+                "Qt5"
             ],
-            "level": "Intermediate",
+            "level": "Advanced",
             "name": "C/C++ Developer"
         },
         {
@@ -61,7 +59,7 @@
                 "Raspberry Pi",
                 "Arm Microcontrollers (STM32Fx)"
             ],
-            "level": "Advanced Beginner",
+            "level": "Intermediate",
             "name": "Embedded Developer"
         },
         {
@@ -75,6 +73,8 @@
         },
         {
             "keywords": [
+                "Cpp14, Cpp17",
+                "OpenCV",
                 "Vuejs / Javascript",
                 "Android / Java",
                 "Golang",
@@ -118,21 +118,21 @@
         },
         {
             "summary": "Acoafra is a product design company that it's focus is on digital and electronic instruments based on customer request.",
-            "website": "https://acoafra",
+            "website": "https://acoafra.ir",
             "name": "Acoafra",
             "position": "Embedded Developer",
             "startDate": "2016-09-01",
             "endDate": "2019-01-01",
             "highlights": [
-                "Worked with C for STM32(ARM), AVR(AtMega) microcontrollers",
-                "Worked with C for microcontrollers",
+                "Worked with C for STM32(ARM), AVR(AtMega), PIC 8bit microcontrollers",
+                "Used protocols such as UART, I2C, SPI, Wi-Fi",
                 "Vuejs for the control panel on PC to communicate with the board",
                 "Also worked with Android (Java) for the android client app."
             ]
         },
         {
             "summary": "Mersa is a product design company. They consult customers to make their products cheaper during manufacturing",
-            "website": "https://mersaelec.com/",
+            "website": "",
             "name": "Mersa",
             "position": "Embedded Developer",
             "startDate": "2017-09-01",
@@ -141,6 +141,7 @@
                 "Worked with C for STM32(ARM), AVR(AtMega) microcontrollers and ESP8266 WIFI chip",
                 "Also worked with Raspberry Pi 3 on a project to play 1080p movies",
                 "Worked with Android (Java) for android application",
+                "Used Wi-Fi, Bluetooth, GPS, GSM modules in multiple projects.",
                 "Using Eagle CAD to design PCB boards"
             ]
         },
@@ -164,7 +165,7 @@
         },
         {
             "language": "English",
-            "fluency": "Intermediate"
+            "fluency": "Intermediate - B1"
         }
     ],
     "interests": []
