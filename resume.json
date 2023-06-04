@@ -1,0 +1,171 @@
+{
+    "meta": {
+        "theme": "caffeine"
+    },
+    "basics": {
+        "name": "Reza Kiani M.",
+        "label": "C/C++ Developer",
+        "image": "https://avatars0.githubusercontent.com/u/416209?s=460&u=38f220a2c9c658141804f881c334c594eb1642ac&v=4",
+        "summary": "I'm a 29 years old C/C++ developer interested in embedded systems, microcontrollers, and electronics, with some experience in the VOIP industry. I also worked on financial-related projects. I am passionate about programming and very flexible in investigating new roles. I prioritize user feedback first, and also I try to moderate the project deadlines.",
+        "website": "",
+        "email": "rkm7232@gmail.com",
+        "location": {
+            "city": "Tehran / Ready to Relocate",
+            "countryCode": "IR"
+        },
+        "profiles": [
+            {
+                "username": "Reza Kiani",
+                "url": "https://www.linkedin.com/in/reza-kiani-a2304b83",
+                "network": "linkedin"
+            },
+            {
+                "url": "https://github.com/the-this-pointer",
+                "username": "the-this-pointer",
+                "network": "github"
+            }
+        ]
+    },
+    "education": [
+        {
+            "endDate": "2017-06-21",
+            "startDate": "2012-09-22",
+            "area": "Robotics Engineering",
+            "studyType": "Bachelors",
+            "institution": "Shahroud University Of Technology"
+        }
+    ],
+    "references": [
+        {
+            "reference": "We currently are working together at Tosan company. In my opinion, Reza is a passionate and motivated developer. He always tries to do his tasks in the best way and on time. He has good knowledge of programming languages especially C/C++ and also has a good technical level here in this company as a developer. More importantly, he is a fast learner and would like to learn new skills from other colleagues. Moreover, if a person needs any help at work, he is ready to contribute to others to resolve their problems. Reza is amazing and this is not only my opinion, other colleagues have the same opinion as me.",
+            "name": "Behnam Arazkhani, Senior C/C++ Developer at Tosan"
+        }
+    ],
+    "skills": [
+        {
+            "keywords": [
+                "C",
+                "Cpp11",
+                "Cpp14",
+                "Qt5",
+                "OpenCV"
+            ],
+            "level": "Intermediate",
+            "name": "C/C++ Developer"
+        },
+        {
+            "keywords": [
+                "Embedded Systems",
+                "Robotics",
+                "Eagle CAD",
+                "Raspberry Pi",
+                "Arm Microcontrollers (STM32Fx)"
+            ],
+            "level": "Advanced Beginner",
+            "name": "Embedded Developer"
+        },
+        {
+            "keywords": [
+                "Freeswitch",
+                "Opensips",
+                "Lua"
+            ],
+            "level": "Advanced Beginner",
+            "name": "Voip Backend Developer"
+        },
+        {
+            "keywords": [
+                "Vuejs / Javascript",
+                "Android / Java",
+                "Golang",
+                "Python",
+                "Git"
+            ],
+            "level": "Advanced Beginner",
+            "name": "Other skills"
+        }
+    ],
+    "work": [
+        {
+            "summary": "Tosan is a company with products focused on banking solutions. The range of products is from core banking services to ATM and POS software",
+            "website": "https://www.tosan.com/en/",
+            "name": "Tosan",
+            "pinned": true,
+            "location": "Tehran",
+            "position": "C/C++ Developer",
+            "startDate": "2021-04-12",
+            "highlights": [
+                "Worked with Cpp11, Qt5, Python",
+                "Worked with financial protocols such as Iso8583, Wosa XFS",
+                "Encryption algorithms like RSA, ECDH, ..."
+            ]
+        },
+        {
+            "summary": "Arya Samaneh is a company with more than a decade of experience in VOIP telecommunication. Also, the company has a multi-platform application that end-users can message or call each other.",
+            "website": "https://sgas.ir",
+            "name": "Arya Samaneh",
+            "pinned": true,
+            "location": "Tehran",
+            "position": "C/C++ Developer, Voip Backend Developer",
+            "startDate": "2018-04-04",
+            "endDate": "2021-03-20",
+            "highlights": [
+                "Worked with Cpp11, Cpp14, Qt5 for client application",
+                "PHP7, Lua for backend with Debian9 OS",
+                "Also worked with PostgreSQL, MongoDB as the database for the system",
+                "Opensips, Freeswitch for handling VOIP calls."
+            ]
+        },
+        {
+            "summary": "Acoafra is a product design company that it's focus is on digital and electronic instruments based on customer request.",
+            "website": "https://acoafra",
+            "name": "Acoafra",
+            "position": "Embedded Developer",
+            "startDate": "2016-09-01",
+            "endDate": "2019-01-01",
+            "highlights": [
+                "Worked with C for STM32(ARM), AVR(AtMega) microcontrollers",
+                "Worked with C for microcontrollers",
+                "Vuejs for the control panel on PC to communicate with the board",
+                "Also worked with Android (Java) for the android client app."
+            ]
+        },
+        {
+            "summary": "Mersa is a product design company. They consult customers to make their products cheaper during manufacturing",
+            "website": "https://mersaelec.com/",
+            "name": "Mersa",
+            "position": "Embedded Developer",
+            "startDate": "2017-09-01",
+            "endDate": "2018-03-20",
+            "highlights": [
+                "Worked with C for STM32(ARM), AVR(AtMega) microcontrollers and ESP8266 WIFI chip",
+                "Also worked with Raspberry Pi 3 on a project to play 1080p movies",
+                "Worked with Android (Java) for android application",
+                "Using Eagle CAD to design PCB boards"
+            ]
+        },
+        {
+            "summary": "Ario was a group made with Robotics students in university to participate in Robotics competitions.",
+            "website": "",
+            "name": "Ario Engineering Group",
+            "position": "Embedded Developer",
+            "startDate": "2014-09-01",
+            "endDate": "2016-09-01",
+            "highlights": [
+                "Designed a flight controller for a UAV robot with a AtMega2560 microcontroller",
+                "Using EagleCAD to design its PCB"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Persian",
+            "fluency": "Native speaker"
+        },
+        {
+            "language": "English",
+            "fluency": "Intermediate"
+        }
+    ],
+    "interests": []
+}

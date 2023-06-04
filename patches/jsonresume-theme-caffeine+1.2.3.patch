@@ -1,0 +1,260 @@
+diff --git a/node_modules/jsonresume-theme-caffeine/index.js b/node_modules/jsonresume-theme-caffeine/index.js
+index 6984ef2..53fbd29 100644
+--- a/node_modules/jsonresume-theme-caffeine/index.js
++++ b/node_modules/jsonresume-theme-caffeine/index.js
+@@ -63,5 +63,8 @@ function render(resume) {
+ }
+ 
+ module.exports = {
+-    render: render
++    render: render,
++    pdfRenderOptions: {
++        preferCSSPageSize: true
++    }
+ };
+diff --git a/node_modules/jsonresume-theme-caffeine/public/index.html b/node_modules/jsonresume-theme-caffeine/public/index.html
+index a6ce2c8..642efb4 100644
+--- a/node_modules/jsonresume-theme-caffeine/public/index.html
++++ b/node_modules/jsonresume-theme-caffeine/public/index.html
+@@ -178,6 +178,7 @@ ul {
+   clear: both; }
+ 
+ .profile-pic {
++  display: none;
+   margin-top: -5px;
+   margin-right: 18px; }
+   .profile-pic img {
+diff --git a/node_modules/jsonresume-theme-caffeine/public/styles/main.css b/node_modules/jsonresume-theme-caffeine/public/styles/main.css
+index 1ff614a..8bcb651 100644
+--- a/node_modules/jsonresume-theme-caffeine/public/styles/main.css
++++ b/node_modules/jsonresume-theme-caffeine/public/styles/main.css
+@@ -55,10 +55,11 @@
+ body {
+   font-family: "Lato", Helvetica, Arial, sans-serif;
+   font-weight: 400;
+-  background: #f8f8f8;
+-  margin: 50px 0 100px;
++  /* background: #f8f8f8; */
++  /* margin: 50px 0 100px; */
+   letter-spacing: .3px;
+-  color: #39424B; }
++  color: #39424B; 
++}
+ 
+ h1, h2, h3, h4, h5, h6 {
+   text-transform: uppercase;
+@@ -147,8 +148,7 @@ ul {
+     ul.two-column li {
+       padding-left: 0; }
+ 
+-@page {
+-  size: A4; }
++@page { size: A4 portrait; margin: 0; }
+ 
+ .container {
+   padding-top: 20px; }
+@@ -170,6 +170,7 @@ ul {
+   clear: both; }
+ 
+ .profile-pic {
++  display: none;
+   margin-top: -5px;
+   margin-right: 18px; }
+   .profile-pic img {
+@@ -184,13 +185,14 @@ ul {
+ /* Layouts */
+ .page {
+   background: white;
+-  width: 612px;
++  /* width: 612px; */
+   min-height: 792px;
+   display: block;
+   margin: 0 auto;
+   border-top: 10px solid #56817A;
+   padding: 36px 22px 30px 34px;
+-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
++  /* box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);  */
++}
+   .page:after {
+     content: "";
+     display: table;
+@@ -207,28 +209,40 @@ ul {
+   overflow: hidden; }
+ 
+ .item {
+-  margin-bottom: 15px; }
++  margin-bottom: 30px; }
+   .item:last-child {
+     margin-bottom: 0; }
+ 
++.no-page-break, .references-container {
++  display: inline-block;
++  width: 100%;
++  page-break-inside: avoid;
++}
++
+ @media print {
+   body {
+-    margin: 0; }
++    background: none !important;
++    margin: 100px !important; 
++  }
++  .right-column {
++    position: relative !important;
++  }
+   .page {
+-    width: 100%;
+-    height: 100%;
+-    margin: 0;
+-    padding: 36px 0 30px;
+-    box-shadow: none; }
++    width: 100% !important;
++    height: 100% !important;
++    margin: 0 !important;
++    padding: 36px 0 30px !important;
++    box-shadow: none !important; }
+     .page .resume-header,
+     .page .resume-content {
+-      padding: 0 22px 0 34px; }
++      padding: 0 22px 0 34px !important; }
+   .container {
+-    page-break-inside: avoid; }
++    position: relative !important;
++    /*page-break-inside: avoid !important;*/ }
+   .work-container .item {
+-    page-break-inside: avoid; }
++    page-break-inside: avoid !important; }
+   .fa-external-link {
+-    display: none; } }
++    display: none !important; } }
+ 
+ /* Components */
+ .info-tag-container {
+diff --git a/node_modules/jsonresume-theme-caffeine/public/views/components/about.hbs b/node_modules/jsonresume-theme-caffeine/public/views/components/about.hbs
+index a97c85c..c76c865 100644
+--- a/node_modules/jsonresume-theme-caffeine/public/views/components/about.hbs
++++ b/node_modules/jsonresume-theme-caffeine/public/views/components/about.hbs
+@@ -1,5 +1,5 @@
+ {{#resume.basics}}
+-<div class="container about-container">
++<div class="container no-page-break about-container">
+     {{> title value="About"}}
+ 
+     {{#if location}}
+diff --git a/node_modules/jsonresume-theme-caffeine/public/views/components/awards.hbs b/node_modules/jsonresume-theme-caffeine/public/views/components/awards.hbs
+index 5ecf2ef..763edae 100644
+--- a/node_modules/jsonresume-theme-caffeine/public/views/components/awards.hbs
++++ b/node_modules/jsonresume-theme-caffeine/public/views/components/awards.hbs
+@@ -3,7 +3,7 @@
+     {{> title value="Awards"}}
+ 
+     {{#each resume.awards}}
+-        <section class="item">
++        <section class="item no-page-break">
+             {{> section-header name=this.title }}
+ 
+             {{#if awarder}}
+diff --git a/node_modules/jsonresume-theme-caffeine/public/views/components/education.hbs b/node_modules/jsonresume-theme-caffeine/public/views/components/education.hbs
+index 12f39bb..e36c9bc 100644
+--- a/node_modules/jsonresume-theme-caffeine/public/views/components/education.hbs
++++ b/node_modules/jsonresume-theme-caffeine/public/views/components/education.hbs
+@@ -3,7 +3,7 @@
+     {{> title value="Education"}}
+ 
+     {{#each resume.education}}
+-        <section class="item">
++        <section class="item no-page-break">
+             {{> section-header name=this.institution }}
+ 
+             <h4>{{#if studyType}}{{studyType}} {{/if}}{{#if area}}{{area}}{{/if}}</h4>
+diff --git a/node_modules/jsonresume-theme-caffeine/public/views/components/interests.hbs b/node_modules/jsonresume-theme-caffeine/public/views/components/interests.hbs
+index a432224..abd4615 100644
+--- a/node_modules/jsonresume-theme-caffeine/public/views/components/interests.hbs
++++ b/node_modules/jsonresume-theme-caffeine/public/views/components/interests.hbs
+@@ -3,7 +3,7 @@
+         {{> title value="Interests"}}
+ 
+         {{#each resume.interests}}
+-            <section class="item">
++            <section class="item no-page-break">
+                 {{#if name}}
+                     <h4 class="bold">{{name}}</h4>
+                 {{/if}}
+diff --git a/node_modules/jsonresume-theme-caffeine/public/views/components/languages.hbs b/node_modules/jsonresume-theme-caffeine/public/views/components/languages.hbs
+index f3c9112..a326809 100644
+--- a/node_modules/jsonresume-theme-caffeine/public/views/components/languages.hbs
++++ b/node_modules/jsonresume-theme-caffeine/public/views/components/languages.hbs
+@@ -1,5 +1,5 @@
+ {{#if resume.languages.length}}
+-    <div class="container languages-container">
++    <div class="container no-page-break languages-container">
+         {{> title value="Languages"}}
+ 
+         <ul class="minimal">
+diff --git a/node_modules/jsonresume-theme-caffeine/public/views/components/publications.hbs b/node_modules/jsonresume-theme-caffeine/public/views/components/publications.hbs
+index 4665621..798a657 100644
+--- a/node_modules/jsonresume-theme-caffeine/public/views/components/publications.hbs
++++ b/node_modules/jsonresume-theme-caffeine/public/views/components/publications.hbs
+@@ -3,7 +3,7 @@
+     {{> title value="Publications"}}
+ 
+     {{#each resume.publications}}
+-    <section class="item">
++    <section class="item no-page-break">
+         {{> section-header name=this.name}}
+ 
+         {{#if publisher}}
+diff --git a/node_modules/jsonresume-theme-caffeine/public/views/components/references.hbs b/node_modules/jsonresume-theme-caffeine/public/views/components/references.hbs
+index ea40292..f0d1f10 100644
+--- a/node_modules/jsonresume-theme-caffeine/public/views/components/references.hbs
++++ b/node_modules/jsonresume-theme-caffeine/public/views/components/references.hbs
+@@ -3,7 +3,7 @@
+     {{> title value="References"}}
+ 
+     {{#each resume.references}}
+-        <section class="item clearfix">
++        <section class="item no-page-break clearfix">
+             {{#if reference}}
+             <i class="fa fa-quote-left pull-left" aria-hidden="true"></i>
+             <blockquote>
+diff --git a/node_modules/jsonresume-theme-caffeine/public/views/components/skills.hbs b/node_modules/jsonresume-theme-caffeine/public/views/components/skills.hbs
+index 1ee63c6..e30a5ac 100644
+--- a/node_modules/jsonresume-theme-caffeine/public/views/components/skills.hbs
++++ b/node_modules/jsonresume-theme-caffeine/public/views/components/skills.hbs
+@@ -1,7 +1,7 @@
+ {{#if resume.skills.length}}
+     <div class="skills-container">
+         {{#each resume.skills}}
+-            <section class="container">
++            <section class="container no-page-break">
+                 {{#if name}}
+                     {{> title value=name}}
+                 {{/if}}
+diff --git a/node_modules/jsonresume-theme-caffeine/public/views/components/volunteer.hbs b/node_modules/jsonresume-theme-caffeine/public/views/components/volunteer.hbs
+index 7721c3c..3e27cdb 100644
+--- a/node_modules/jsonresume-theme-caffeine/public/views/components/volunteer.hbs
++++ b/node_modules/jsonresume-theme-caffeine/public/views/components/volunteer.hbs
+@@ -3,7 +3,7 @@
+     {{> title value="Volunteer"}}
+ 
+     {{#each resume.volunteer}}
+-    <section class="item">
++    <section class="item no-page-break">
+         {{> section-header name=this.organization }}
+         {{#if position}}
+         <h5>{{position}}</h5>
+diff --git a/node_modules/jsonresume-theme-caffeine/public/views/components/work.hbs b/node_modules/jsonresume-theme-caffeine/public/views/components/work.hbs
+index 9c6a5fc..713dc3a 100644
+--- a/node_modules/jsonresume-theme-caffeine/public/views/components/work.hbs
++++ b/node_modules/jsonresume-theme-caffeine/public/views/components/work.hbs
+@@ -3,8 +3,8 @@
+     {{> title value="Experience"}}
+ 
+     {{#each resume.work}}
+-        <section class="item">
+-            {{> section-header name=this.company }}
++        <section class="item no-page-break">
++            {{> section-header name=this.name }}
+ 
+             {{#if position}}
+             <h4>{{position}}</h4>

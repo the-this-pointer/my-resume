@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "jsonresume-theme-actual": "^0.2.1",
+    "jsonresume-theme-caffeine": "^1.2.3",
+    "jsonresume-theme-even": "^0.18.1",
+    "jsonresume-theme-flat": "^0.3.7",
+    "jsonresume-theme-macchiato": "^1.1.0",
+    "jsonresume-theme-paper": "^0.5.0"
+  },
+  "scripts": {
+    "postinstall": "patch-package",
+    "validate": "resume validate",
+    "html": "resume export --theme caffeine index.html",
+    "pdf": "resume export --theme caffeine resume.pdf",
+    "serve": "resume serve --theme caffeine"
+  },
+  "devDependencies": {
+    "patch-package": "^7.0.0"
+  }
+}
