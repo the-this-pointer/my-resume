@@ -57,7 +57,8 @@
                 "Robotics",
                 "Eagle CAD",
                 "Raspberry Pi",
-                "Arm Microcontrollers (STM32Fx)"
+                "Arm Microcontrollers (STM32Fx, LPC17xx)",
+                "Avr Microcontrollers (AtMega)"
             ],
             "level": "Intermediate",
             "name": "Embedded Developer"
@@ -111,9 +112,8 @@
             "endDate": "2021-03-20",
             "highlights": [
                 "Worked with Cpp11, Cpp14, Qt5 for client application",
-                "PHP7, Lua for backend with Debian9 OS",
-                "Also worked with PostgreSQL, MongoDB as the database for the system",
-                "Opensips, Freeswitch for handling VOIP calls."
+                "Developed a Hosted PBX for the client app calls using PHP7, Opensips, Freeswitch",
+                "Worked with databases such as PostgreSQL, MongoDB, Mysql"
             ]
         },
         {
@@ -124,7 +124,7 @@
             "startDate": "2016-09-01",
             "endDate": "2019-01-01",
             "highlights": [
-                "Worked with C for STM32(ARM), AVR(AtMega), PIC 8bit microcontrollers",
+                "Worked with C for STM32Fx & LPC17xx(ARM), AVR(AtMega), PIC 8bit microcontrollers",
                 "Used protocols such as UART, I2C, SPI, Wi-Fi",
                 "Vuejs for the control panel on PC to communicate with the board",
                 "Also worked with Android (Java) for the android client app."
