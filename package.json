@@ -10,7 +10,7 @@
   "scripts": {
     "postinstall": "patch-package",
     "validate": "resume validate",
-    "html": "resume export --theme caffeine index.html",
+    "html": "resume export --theme flat docs/index.html",
     "pdf": "resume export --theme caffeine resume.pdf",
     "serve": "resume serve --theme caffeine"
   },

@@ -91,20 +91,36 @@
             "summary": "Tosan is a company with products focused on banking solutions. The range of products is from core banking services to ATM and POS software",
             "website": "https://www.tosan.com/en/",
             "name": "Tosan",
+            "company": "Tosan",
             "pinned": true,
             "location": "Tehran",
             "position": "C/C++ Developer",
             "startDate": "2021-04-12",
             "highlights": [
-                "Worked with Cpp11, Qt5, Python",
+                "Worked with Cpp11, Qt5, Python, Lua",
                 "Worked with financial protocols such as Iso8583, Wosa XFS",
+                "Worked with Windows APIs, WDK Framework, ...",
                 "Encryption algorithms like RSA, ECDH, ..."
+            ]
+        },
+        {
+            "summary": "Chakavak telecommunication is known as a leading company providing the latest VoIP solutions based on NGN/IMS Standards in Carrier and Enterprise level. Here is the list of products supporting by our company: Class 5 &4 Soft switch, SBC, Call Center and Hosted PBX.",
+            "website": "https://chakavak.io/en/",
+            "name": "Chakavak",
+            "company": "Chakavak",
+            "location": "Tehran",
+            "position": "Software Developer",
+            "startDate": "2022-03-20",
+            "endDate": "2022-09-20",
+            "highlights": [
+                "Worked on Hosted PBX project powered by Kamailio, Asterisk"
             ]
         },
         {
             "summary": "Arya Samaneh is a company with more than a decade of experience in VOIP telecommunication. Also, the company has a multi-platform application that end-users can message or call each other.",
             "website": "https://sgas.ir",
             "name": "Arya Samaneh",
+            "company": "Arya Samaneh",
             "pinned": true,
             "location": "Tehran",
             "position": "C/C++ Developer, Voip Backend Developer",
@@ -112,7 +128,8 @@
             "endDate": "2021-03-20",
             "highlights": [
                 "Worked with Cpp11, Cpp14, Qt5 for client application",
-                "Developed a Hosted PBX for the client app calls using PHP7, Opensips, Freeswitch",
+                "Implemented multi-call support for the client application",
+                "Developed a Hosted PBX for the client app calls using PHP7, Lua, Opensips, Freeswitch",
                 "Worked with databases such as PostgreSQL, MongoDB, Mysql"
             ]
         },
@@ -120,6 +137,7 @@
             "summary": "Acoafra is a product design company that it's focus is on digital and electronic instruments based on customer request.",
             "website": "https://acoafra.ir",
             "name": "Acoafra",
+            "company": "Acoafra",
             "position": "Embedded Developer",
             "startDate": "2016-09-01",
             "endDate": "2019-01-01",
@@ -134,6 +152,7 @@
             "summary": "Mersa is a product design company. They consult customers to make their products cheaper during manufacturing",
             "website": "",
             "name": "Mersa",
+            "company": "Mersa",
             "position": "Embedded Developer",
             "startDate": "2017-09-01",
             "endDate": "2018-03-20",
@@ -149,6 +168,7 @@
             "summary": "Ario was a group made with Robotics students in university to participate in Robotics competitions.",
             "website": "",
             "name": "Ario Engineering Group",
+            "company": "Ario Engineering Group",
             "position": "Embedded Developer",
             "startDate": "2014-09-01",
             "endDate": "2016-09-01",
